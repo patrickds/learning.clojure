@@ -1,6 +1,6 @@
-(ns find-last-test
+(ns last-element-test
   (:require [clojure.test :refer :all]
-            [find-last :refer :all]))
+            [last-element :refer :all]))
 
 (deftest test-last-of
   (testing "Last of collection"

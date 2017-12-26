@@ -1,4 +1,4 @@
-(ns find-last)
+(ns last-element)
 
 (defn last-index-of
   [list]
