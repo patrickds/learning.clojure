@@ -1,11 +1,8 @@
 (ns flatten)
 
 (defn flatten-of
-  [coll]
-  (let [head (first coll)
-        tail (rest coll)]
-  (if (sequential? head)
-  (concat (flatten-of head) (flatten-of tail))
-  (if (nil? head)
-  []
-  (concat [head] (flatten-of tail))))))
+  [[head & tail]]
+  (cond
+    (sequential? head) (concat (flatten-of head) (flatten-of tail))
+    (some? head) (cons head (flatten-of tail))
+    :else '() ))
